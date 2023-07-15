@@ -1,13 +1,13 @@
 
-import guesschecker
+import guessChecker
 
 def test_checker():
-    checker = guesschecker.GuessChecker("test")
+    checker = guessChecker.GuessChecker("test")
     assert(checker.checkGuess("test")["result"])
     assert not(checker.checkGuess("blah")["result"])
 
 def test_position():
-    checker = guesschecker.GuessChecker("abcde")
+    checker = guessChecker.GuessChecker("abcde")
     result = checker.checkGuess("acpoit")
     assert not (result["result"])
     assert (result["characters"][0]["positionCorrect"])
